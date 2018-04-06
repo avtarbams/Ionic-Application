@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      My First Ionic App
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    
+      <ion-item>
+        
+        <ion-avatar item-right >
+          <img src="assets/imgs/avatar.png">
+        </ion-avatar>
+        <h2>Avtar Singh Bamra</h2>
+        <p>March 16, 2017</p>
+      </ion-item>
+      <img src="assets/imgs/1.jpg">
+      <ion-card-content>
+        <p>Image Manipulation workshop was held under the banner of CSI-PIIT on 22nd February, 2013 was a hands-on session conducted by Mr. Avtar Singh Bamra. The workshop started with a brief introduction about the tools and options available for image manipulation.</p>
+      </ion-card-content>
+    
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear large>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>150 Likes</div>
+          </button>
+          <button ion-button icon-right clear large>
+              <ion-icon name="thumbs-down"></ion-icon>
+              <div>15 Dislikes</div>
+            </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <button ion-button [navPush]="pushPage" [navParams]="{character:'Marvel Studios', images:'marvel.png', description: 'Marvel Studios, LLC (originally known as Marvel Films from 1993 to 1996) is an American motion picture studio based at The Walt Disney Studios in Burbank, California and is a subsidiary of Walt Disney Studios, itself a wholly owned division of The Walt Disney Company, with film producer Kevin Feige serving as president. Previously, the studio was a subsidiary of Marvel Entertainment until Disney reorganized the companies in August 2015.'}" full color="danger" >Go to Marvel Page (Using navPush property)</button>
+    
+        <ion-list>
+            <ion-item>
+              <ion-thumbnail item-start>
+                <img src="assets/imgs/im.png">
+              </ion-thumbnail>
+              <ion-label>Iron Man</ion-label>
+              <ion-toggle [(ngModel)]="im" color="danger" value="im" checked="false" (ionChange)="changeim()"></ion-toggle>
+            </ion-item>
+            <ion-item>
+                <ion-thumbnail item-start>
+                  <img src="assets/imgs/ca.png">
+                </ion-thumbnail>
+                <ion-label>Captain America</ion-label>
+                <ion-toggle [(ngModel)]="ca" color="default" value="ca" checked="false" (ionChange)="changeca()"></ion-toggle>
+              </ion-item>
+              <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="assets/imgs/hulk.png">
+                  </ion-thumbnail>
+                  <ion-label>The Incredible Hulk</ion-label>
+                  <ion-toggle [(ngModel)]="hulk" color="secondary" value="hulk" checked="false" (ionChange)="changehulk()"></ion-toggle>
+                </ion-item>
+                <ion-item>
+                    <ion-thumbnail item-start>
+                      <img src="assets/imgs/bw.png">
+                    </ion-thumbnail>
+                    <ion-label>Black Widow</ion-label>
+                    <ion-toggle [(ngModel)]="bw" color="dark" value="ca" checked="false" (ionChange)="changebw()"></ion-toggle>
+                  </ion-item>
+          </ion-list>
+          <button ion-button (click)="navigate()" full color="dark">Toggle Character and tap here (using Push() Cmd)</button>
+    
+</ion-content>
